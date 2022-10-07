@@ -1,0 +1,23 @@
+.container {
+  background-color: #FFFFFF;
+  height: 100vh;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  width: 80%;
+  
+}
+
+.Logo {
+  margin-left: 50px;
+  margin-bottom: 70px;
+  padding-top: 50px;
+  
+}
