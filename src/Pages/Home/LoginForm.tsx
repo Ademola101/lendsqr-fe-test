@@ -12,7 +12,9 @@ const LoginForm = () => {
         }}/>
       </div>
 
-
+      <button type='submit' className={styles.loginButton}>
+         LOG IN
+      </button>
     </form>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/InputLabel.module.css';
 
 
 interface  Props {
@@ -7,12 +8,12 @@ interface  Props {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   type: string;
-  className?: string;
+
 }
-const InputLabel = ({ name, placeholder, value, onChange, type, className }: Props) => {
+const InputLabel = ({ name, placeholder, value, onChange, type, }: Props) => {
   return (
     <label htmlFor={name}>
-      <input type= {type} name= {name} placeholder = {placeholder} value = {value} onChange = {onChange} className = {className} />
+      <input type= {type} name= {name} placeholder = {placeholder} value = {value} onChange = {onChange} className = {styles.input} />
 
     </label>
   );

@@ -11,10 +11,12 @@ const Welcome = () => {
         <div className= {styles.weltext}>
       Welcome!
         </div>
-        <small> Enter details to login</small>
+        <small> Enter details to login.</small>
       </div>
 
       <LoginForm/>
+
+
 
 
     </div>

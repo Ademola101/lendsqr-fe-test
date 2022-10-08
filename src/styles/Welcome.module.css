@@ -1,9 +1,11 @@
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 200px;
+  margin-top: 140px;
   flex-direction: column;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .weltext {
@@ -14,5 +16,6 @@
 
 .welcontainer {
   color: #213F7D;
+  margin-bottom: 60px;
 }
 
