@@ -1,15 +1,20 @@
 import React from 'react';
 import InputLabel from './InputLabel';
 import styles from '../../styles/LoginForm.module.css';
+import { useForm } from 'react-hook-form';
 
 const LoginForm = () => {
+
+  const { register, handleSubmit, formState:{ errors } } = useForm();
+  const onSubmit = () => console.log('submit');
+
+
   return (
-    <form >
+    <form onSubmit={handleSubmit(onSubmit)}>
 
       <div className= {styles.input}>
-        <InputLabel name="email" placeholder="Email" value="" onChange={() => {console.log('helo');}} type = {'email'}/>
-        <InputLabel type='password' name="password" placeholder="Password" value="" onChange={() => {console.log('helo');
-        }}/>
+        <InputLabel  placeholder="Email"  type = 'email' {...register('email')}   />
+        <InputLabel type='password'  placeholder="Password" {...register('password')}  />
       </div>
 
       <button type='submit' className={styles.loginButton}>
