@@ -7,11 +7,12 @@ interface  Props {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   type: string;
+  className?: string;
 }
-const InputLabel = ({ name, placeholder, value, onChange, type }: Props) => {
+const InputLabel = ({ name, placeholder, value, onChange, type, className }: Props) => {
   return (
     <label htmlFor={name}>
-      <input type= {type} name= {name} placeholder = {placeholder} value = {value} onChange = {onChange} />
+      <input type= {type} name= {name} placeholder = {placeholder} value = {value} onChange = {onChange} className = {className} />
 
     </label>
   );

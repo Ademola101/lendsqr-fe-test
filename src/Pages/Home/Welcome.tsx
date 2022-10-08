@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../../styles/Welcome.module.css';
-import InputLabel from './InputLabel';
+import LoginForm from './LoginForm';
 
 const Welcome = () => {
   return (
@@ -14,11 +14,8 @@ const Welcome = () => {
         <small> Enter details to login</small>
       </div>
 
-      <div>
-        <InputLabel name="email" placeholder="Email" value="" onChange={() => {console.log('helo');}} type = {'email'}/>
-        <InputLabel type='password' name="password" placeholder="Password" value="" onChange={() => {console.log('helo');
-        }}/>
-      </div>
+      <LoginForm/>
+
 
     </div>
   );
