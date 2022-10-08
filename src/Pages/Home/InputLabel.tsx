@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from '../../styles/InputLabel.module.css';
 
 
@@ -9,13 +9,14 @@ interface  Props {
   props?: any;
 
 }
-const InputLabel = ({  placeholder, type, props }: Props) => {
+const InputLabel = forwardRef(({  placeholder, type, props }: Props, ref) => {
   return (
     <label >
-      <input type= {type} placeholder = {placeholder}   className = {styles.input} {...props} />
+      <input ref={ref} type= {type} placeholder = {placeholder}   className = {styles.input} {...props} />
 
     </label>
   );
-};
+});
 
+InputLabel.displayName = 'InputLabel';
 export default InputLabel;
