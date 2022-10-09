@@ -4,6 +4,9 @@ import ActiveUserIcon from './ActiveUserIcon';
 import styles from '../../styles/Usercard.module.css';
 import UserWithLoanIcon from './UserWithLoanIcon';
 import UserWithSavingIcon from './UserWithSavingIcon';
+import { getAllUsers } from '../../Services/Users';
+import { useQuery } from '@tanstack/react-query';
+import { UserType } from '../../../types';
 
 interface User {
 icon: JSX.Element;
@@ -35,6 +38,11 @@ const UserCard = ({ user }:Props) => {
 
 
 const UsersCard = () => {
+  const { data:Users, isLoading, isError } = useQuery(['users'], getAllUsers);
+  console.log(Users);
+
+
+
 
   const data:Array<User> = [
     { icon:<UserIcon/>,
