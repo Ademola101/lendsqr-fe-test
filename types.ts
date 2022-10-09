@@ -37,7 +37,7 @@ type Education = {
 }
 
 export interface UserType {
-  createdAt: string;
+  createdAt: Date;
   orgName: string;
   userName: string;
   email: string;

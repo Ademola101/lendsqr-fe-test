@@ -4,7 +4,11 @@ import UsersCard from './UserCard';
 export const User = () => {
   return (
     <div className= {styles.container}>
-      <UsersCard/>
+      <h2 className= {styles.usertext}>Users</h2>
+      <div className= {styles.dashpage}>
+        <UsersCard/>
+      </div>
+
 
 
     </div>
