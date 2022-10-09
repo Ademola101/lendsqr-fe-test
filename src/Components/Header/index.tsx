@@ -1,12 +1,14 @@
 import React from 'react';
 import Logo from '../Logo';
+import Search from '../Header/Search';
+import styles from '../../styles/Header.module.css';
 
 const index = () => {
   return (
-    <div>
+    <div className= {styles.container}>
 
 
-      <Logo />
+      <Logo /> <Search />
     </div>
   );
 };
