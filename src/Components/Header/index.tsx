@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from '../../Components/Header';
+import Logo from '../Logo';
 
 const index = () => {
   return (
     <div>
 
 
-      <Header />
+      <Logo />
     </div>
   );
 };

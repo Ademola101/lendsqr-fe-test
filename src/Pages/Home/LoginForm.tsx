@@ -3,14 +3,21 @@ import styles from '../../styles/LoginForm.module.css';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useNavigate } from 'react-router-dom';
 
 type Data = {
   email: string;
   password: string;
 }
 
+const Credentials = {
+  email: 'ademola@yahoo.com',
+  password: '123456'
+};
+
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const schema = yup.object().shape({
     email: yup.string().email().required(),
@@ -20,7 +27,14 @@ const LoginForm = () => {
   const { register, handleSubmit, formState:{ errors }, watch } = useForm<Data>({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data:Data) => console.log(data);
+  const onSubmit = (data:Data) => {
+    if (
+      data.email === Credentials.email && data.password === Credentials.password
+
+    ) {
+      navigate('/dashboard');
+    }
+  };
   const passwordValue = watch('password');
 
   const togglePassword = () => {
