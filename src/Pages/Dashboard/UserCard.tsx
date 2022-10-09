@@ -39,14 +39,15 @@ const UserCard = ({ user }:Props) => {
 
 const UsersCard = () => {
   const { data:Users, isLoading, isError } = useQuery(['users'], getAllUsers);
-  console.log(Users);
-
+  const users:UserType[] | undefined = Users;
+  const totalUsers:number|undefined = users?.length;
 
 
 
   const data:Array<User> = [
     { icon:<UserIcon/>,
-      title: 'Users'
+      title: 'Users',
+      numbers: totalUsers?.toString()
 
     },
     {
@@ -63,7 +64,18 @@ const UsersCard = () => {
       title: 'Users with saving'
     }
   ];
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error...</div>;
+
+  }
   return (
+
+
     <div className= {styles.container}>
 
       {data.map((d, i) => <UserCard key={i} user = {d}/>)}
