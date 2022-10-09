@@ -1,0 +1,23 @@
+
+.sidebarUser {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  width: 20%;
+}
+
+.user {
+  
+  
+  gap: 10px;
+  align-items: center;
+  width: 80%;
+}

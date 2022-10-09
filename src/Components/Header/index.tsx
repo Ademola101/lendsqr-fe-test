@@ -5,11 +5,11 @@ import styles from '../../styles/Header.module.css';
 
 const index = () => {
   return (
-    <div className= {styles.container}>
+    <header className= {styles.headercontainer}>
 
 
       <Logo /> <Search />
-    </div>
+    </header>
   );
 };
 

@@ -1,7 +1,9 @@
-.container {
+.headercontainer {
   display: flex;
   flex-direction: row;
   gap: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .searchinput {
