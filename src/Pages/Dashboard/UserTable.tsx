@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { UserType } from '../../../types';
 import { getAllUsers } from '../../Services/API/Users';
 import styles from '../../styles/UserTable.module.css';
+import ReactPaginate from 'react-paginate';
 
 interface UserTableProps {
   user: UserType
@@ -37,8 +38,16 @@ const UserTableExcerpt = ({ user }:UserTableProps) => {
 };
 
 const UserTable = () => {
+  const [pageNumber,setPageNumber] = useState<number>(0);
+  const usersPerPage = 10;
+  const pagesVisited = pageNumber * usersPerPage;
+
   const { data:Users } = useQuery(['users'], getAllUsers);
-  const users:UserType[] | undefined = Users;
+  const users:UserType[] = Users as UserType[];
+  const displayUsers = (users:UserType[]) => {
+    const newUsers = users.slice(pagesVisited, pagesVisited + usersPerPage);
+    return newUsers.map((user, i) => <UserTableExcerpt key= {i} user= {user}/>);
+  };
 
   return (
     <div className= {styles.tablecontainer}>
@@ -49,7 +58,7 @@ const UserTable = () => {
         <span className= {styles.header}>Phone Number</span>
         <span className= {styles.header}>Date joined</span> <span className= {styles.headertext}>Status</span>
       </div>
-      {users?.map((user, i) => <UserTableExcerpt user={user} key={i}/>)}
+      {displayUsers(users)}
     </div>
   );
 };
