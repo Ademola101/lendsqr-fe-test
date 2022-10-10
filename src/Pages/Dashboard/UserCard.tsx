@@ -42,7 +42,7 @@ const UsersCard = () => {
   const { data:Users, isLoading, isError } = useQuery(['users'], getAllUsers);
   const users:UserType[] | undefined = Users;
   const totalUsers:number|undefined = users?.length;
-  console.log(users);
+
 
 
 

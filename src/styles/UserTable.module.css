@@ -39,6 +39,7 @@
   margin-right: 20px;
   margin-left: 20px;
   gap: 20px;
+  border-bottom: 1px solid #e0e0e0;
   
 
 
@@ -53,5 +54,6 @@
   width: 20%;
   
   overflow-wrap: break-word;
+  text-align: start;
 
 }
