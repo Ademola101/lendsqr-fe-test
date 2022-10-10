@@ -6,6 +6,8 @@ import styles from '../../styles/UserTable.module.css';
 import ReactPaginate from 'react-paginate';
 import UserTableExcerpt from './UserTableExcerpt';
 import TableHeaderIcon from './TableHeaderIcon';
+import ArrowLeft from './ArrorLeft';
+import ArrowRight from './ArrowRight';
 
 interface Paginate {
   selected:number
@@ -41,10 +43,10 @@ const UserTable = () => {
       </div>
       {displayUsers(users)}
       <div>
-        <ReactPaginate previousLabel = {pageNumber > 0 &&  'Previous' }
+        <ReactPaginate previousLabel = {pageNumber > 0 &&  <ArrowLeft/> }
           pageCount={pageCount}
           onPageChange = {changePage}
-          nextLabel = {'next'}
+          nextLabel = {pageNumber < pageCount - 1 && <ArrowRight/>}
           containerClassName = {
             styles.paginationbtns
           }
