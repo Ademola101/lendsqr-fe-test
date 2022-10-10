@@ -9,6 +9,9 @@ interface UserTableProps {
   user: UserType
 }
 
+interface Paginate {
+  selected:number
+}
 const UserTableExcerpt = ({ user }:UserTableProps) => {
 
   const getDate = (date:string) => {
@@ -45,8 +48,12 @@ const UserTable = () => {
   const { data:Users } = useQuery(['users'], getAllUsers);
   const users:UserType[] = Users as UserType[];
   const displayUsers = (users:UserType[]) => {
-    const newUsers = users.slice(pagesVisited, pagesVisited + usersPerPage);
-    return newUsers.map((user, i) => <UserTableExcerpt key= {i} user= {user}/>);
+    const newUsers = users?.slice(pagesVisited, pagesVisited + usersPerPage);
+    return newUsers?.map((user, i) => <UserTableExcerpt key= {i} user= {user}/>);
+  };
+  const pageCount:number = Math.ceil(users?.length / usersPerPage);
+  const changePage = ({ selected }:Paginate) => {
+    setPageNumber(selected);
   };
 
   return (
@@ -59,6 +66,30 @@ const UserTable = () => {
         <span className= {styles.header}>Date joined</span> <span className= {styles.headertext}>Status</span>
       </div>
       {displayUsers(users)}
+      <div>
+        <ReactPaginate previousLabel = {pageNumber > 0 &&  'Previous' }
+          pageCount={pageCount}
+          onPageChange = {changePage}
+          nextLabel = {'next'}
+          containerClassName = {
+            styles.paginationbtns
+          }
+          previousLinkClassName = {
+            styles.previousbtn
+          }
+          nextLinkClassName = {
+            styles.nextbtn
+          }
+          disabledClassName = {
+            styles.paginationdisabled
+          }
+          activeClassName = {
+            styles.paginationactive
+          }
+
+        />
+      </div>
+
     </div>
   );
 };
