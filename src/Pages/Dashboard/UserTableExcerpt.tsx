@@ -8,7 +8,7 @@ interface UserTableProps {
 
 const UserTableExcerpt = ({ user }:UserTableProps) => {
 
-  const getDate = (date:string) => {
+  const setDateFormat = (date:string) => {
     const newDate:string = new Date(date).toLocaleDateString(
       'en-US',
       {
@@ -27,7 +27,7 @@ const UserTableExcerpt = ({ user }:UserTableProps) => {
         <span className= {styles.headertext}>{user.userName}</span>
         <span className= {styles.headertext}>{user.email}</span>
         <span className= {styles.headertext}>{user.phoneNumber}</span>
-        <span className= {styles.headertext}>{getDate(user.createdAt)}</span>
+        <span className= {styles.headertext}>{setDateFormat(user.createdAt)}</span>
         <span className= {styles.headertext}>Active</span>
       </div>
     </div>
