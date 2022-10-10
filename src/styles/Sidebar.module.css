@@ -1,3 +1,33 @@
 .container {
   color: #213F7D;
+  margin-left: 20px;
+  
+}
+
+.linkcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+
+}
+
+.link {
+  color: #213F7D;
+  text-decoration: none;
+
+}
+
+.switch {
+  color: #213F7D;
+  text-decoration: none;
+
+}
+
+.switchcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+
 }

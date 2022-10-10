@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/Sidebar.module.css';
 
 type Link= {
   name: string;
@@ -13,9 +14,9 @@ interface Props {
 
 const CustomerLink = ({ link }:Props) => {
   return (
-    <div>
+    <div className= {styles.linkcontainer}>
 
-      <a href="#">{link.icon} {link.name}</a>
+      <a className= {styles.link} href="#">{link.icon} {link.name}</a>
     </div>
   );
 };
@@ -50,7 +51,9 @@ const CustomerLinks = () => {
     }
   ];
   return (
-    <div>{links.map((link, i) => <CustomerLink link={link} key ={i}/>)}</div>
+    <div>
+      <p> Customers</p>
+      {links.map((link, i) => <CustomerLink link={link} key ={i}/>)}</div>
   );
 };
 
