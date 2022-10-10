@@ -4,42 +4,11 @@ import { UserType } from '../../../types';
 import { getAllUsers } from '../../Services/API/Users';
 import styles from '../../styles/UserTable.module.css';
 import ReactPaginate from 'react-paginate';
-
-interface UserTableProps {
-  user: UserType
-}
+import UserTableExcerpt from './UserTableExcerpt';
 
 interface Paginate {
   selected:number
 }
-const UserTableExcerpt = ({ user }:UserTableProps) => {
-
-  const getDate = (date:string) => {
-    const newDate:string = new Date(date).toLocaleDateString(
-      'en-US',
-      {
-        month: 'long',
-        day: 'numeric',
-        year: 'numeric'
-      }
-    );
-    return newDate;
-
-  };
-  return (
-    <div>
-      <div className= {styles.excerptcontainer}>
-        <span className= {styles.headertext}>{user.orgName}</span>
-        <span className= {styles.headertext}>{user.userName}</span>
-        <span className= {styles.headertext}>{user.email}</span>
-        <span className= {styles.headertext}>{user.phoneNumber}</span>
-        <span className= {styles.headertext}>{getDate(user.createdAt)}</span>
-        <span className= {styles.headertext}>Active</span>
-      </div>
-    </div>
-  );
-};
-
 const UserTable = () => {
   const [pageNumber,setPageNumber] = useState<number>(0);
   const usersPerPage = 10;
