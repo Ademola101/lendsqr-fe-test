@@ -67,10 +67,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 10px;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  gap: 20px;
   list-style-type: none;
 }
 
@@ -81,9 +78,18 @@
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
-  padding-left: 20px;
+  
+  text-align: center;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 
 }
+
+
+
 
 .paginationbtns a:hover {
   background-color: #39CDCC;
@@ -92,24 +98,31 @@
   font-size: 0.8rem;
   font-weight: 600;
   border-radius: 4px;
-  padding: 10px;
+
+  
   cursor: pointer;
 
 }
+ 
 
-.paginationactive {
+.paginationactive a{
   background-color: #39CDCC;
   color: #fff;
   text-decoration: none;
-  height: 20px
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+
   
+  cursor: pointer;
 
 }
+/*
 
 .paginationactive a:hover {
   background-color: #39CDCC;
   color: #fff;
-}
+} */
 
 .icon {
   width: 10px
