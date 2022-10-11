@@ -1,5 +1,4 @@
 import React from 'react';
-import UserAvatar from './UserAvatar';
 import styles from '../../styles/UserDetails.module.css';
 import { UserType } from '../../../types';
 
@@ -23,9 +22,13 @@ const navlinks:string[]  =  [
 const Detailslink = ({ link }: DetailslinkProps) => {
 
   return (
-    <div className= {styles.detailslink}>
+
+    <a  className= {styles.detailslink} href="#">
+
       {link}
-    </div>
+
+    </a>
+
   );
 };
 
@@ -36,6 +39,7 @@ const DetailsHead = ({ user }: UserDetailsProps) => {
 
     <div className={styles.detailshead}>
       <div className={styles.avatarname}>
+
         <img src={user?.profile.avatar} alt="avatar" />
 
         <div className= {styles.namebvncontainer}>
@@ -57,14 +61,16 @@ const DetailsHead = ({ user }: UserDetailsProps) => {
         User tier
 
       </div>
-
-      <div className= {styles.balance}>
-        <div>
+      <div>
+        <div className= {styles.balance}>
+          <div>
         &#8358;{user?.accountBalance}
+          </div>
         </div>
-        <small>
+        <small className= {styles.accountsmall}>
           {user?.accountNumber} {user?.orgName}
         </small>
+
       </div>
       <div className= {styles.dlink}>
         {navlinks.map((link, i) => <Detailslink key={i} link = {link}/>)}

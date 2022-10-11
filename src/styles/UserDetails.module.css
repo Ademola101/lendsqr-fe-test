@@ -37,11 +37,12 @@
   background-color: #fff;
   margin-top: 10px;
   flex-wrap: wrap;
+  padding-bottom: 5px;
 }
 
-.detailshead *:last-child {
+/* .detailshead *:last-child {
   width: 100%;
-}
+} */
 
 .avatar {
   width: 60px;
@@ -63,13 +64,13 @@
   gap: 10px;
   border-right: 1px solid #e0e0e0;
   padding-right: 20px;
-  height: 100px;
+  height: 70px;
 }
 
 .tier {
   padding-right: 20px;
   border-right: 1px solid #e0e0e0;
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,16 +94,57 @@
   align-items: center;
   color: #213F7D;
 }
+.accountsmall {
+  color: #213F7D;
+  font-size: 0.8rem;
+}
 
 .dlink {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+
+}
+
+.dlink *:first-child {
+  color: #39CDCC;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .detailslink {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  color: #213F7D;
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  width: 24%;
 
+
+
+}
+
+.detailslink:hover {
+  color: #39CDCC;
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-left: 20px;
+}
+
+.userptext {
+  font-size: 1rem;
+  color: #545F7D;
+  padding-left: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }

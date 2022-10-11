@@ -9,6 +9,7 @@ import Header from '../../Components/Header';
 import DetailsHead from './DetailsHead';
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from './ArrowBackIcon';
+import PersonalInformation from './PersonalInformation';
 
 type id = string | undefined;
 const index = () => {
@@ -31,10 +32,14 @@ const index = () => {
         </div>
         <div className= {styles.body}>
           <p> {
-            <Link className= {styles.link} to= '/dashboard'> <ArrowBackIcon/>back to user   </Link>
+            <Link className= {styles.link} to= '/dashboard'> <ArrowBackIcon/> <span> Back to Users</span>   </Link>
 
           }</p>
+          <p className= {styles.userptext}>
+            User Details
+          </p>
           <DetailsHead user={User}/>
+          <PersonalInformation user={User}/>
         </div>
       </div>
     </div>
