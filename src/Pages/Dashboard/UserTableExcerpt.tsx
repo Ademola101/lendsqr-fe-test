@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../../styles/UserTable.module.css';
 import { UserType } from '../../../types';
+import StatusVectorIcon from './StatusVectorIcon';
 
 interface UserTableProps {
   user: UserType
@@ -28,7 +29,7 @@ const UserTableExcerpt = ({ user }:UserTableProps) => {
         <span className= {styles.headertext}>{user.email}</span>
         <span className= {styles.headertext}>{user.phoneNumber}</span>
         <span className= {styles.headertext}>{setDateFormat(user.createdAt)}</span>
-        <span className= {styles.headertext}>Active</span>
+        <span className= {styles.headertextstatus}>Active <StatusVectorIcon/></span>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import TableHeaderIcon from './TableHeaderIcon';
 import ArrowLeft from './ArrorLeft';
 import ArrowRight from './ArrowRight';
 
+
 interface Paginate {
   selected:number
 }
@@ -39,31 +40,33 @@ const UserTable = () => {
         <span className= {styles.header}>Organization <TableHeaderIcon/></span>  <span className= {styles.header}>User Name <TableHeaderIcon/></span>
         <span className= {styles.header}>Email <TableHeaderIcon/></span>
         <span className= {styles.header}>Phone Number <TableHeaderIcon/></span>
-        <span className= {styles.header}>Date joined <TableHeaderIcon/></span> <span className= {styles.header}>Status <TableHeaderIcon/></span>
+        <span className= {styles.header}>Date joined <TableHeaderIcon/></span> <span className= {styles.header}>Status  <TableHeaderIcon/></span>
       </div>
       {displayUsers(users)}
-      <div>
-        <ReactPaginate previousLabel = {pageNumber > 0 &&  <ArrowLeft/> }
-          pageCount={pageCount}
-          onPageChange = {changePage}
-          nextLabel = {pageNumber < pageCount - 1 && <ArrowRight/>}
-          containerClassName = {
-            styles.paginationbtns
-          }
-          previousLinkClassName = {
-            styles.previousbtn
-          }
-          nextLinkClassName = {
-            styles.nextbtn
-          }
-          disabledClassName = {
-            styles.paginationdisabled
-          }
-          activeClassName = {
-            styles.paginationactive
-          }
+      <div className= {styles.showpagecontainer}> <div className= {styles.showing}>
+showing {usersPerPage * pageNumber + 1} to {usersPerPage * pageNumber + usersPerPage} of {users?.length} entries
+      </div>
+      <ReactPaginate previousLabel = {pageNumber > 0 &&  <ArrowLeft/> }
+        pageCount={pageCount}
+        onPageChange = {changePage}
+        nextLabel = {pageNumber < pageCount - 1 && <ArrowRight/>}
+        containerClassName = {
+          styles.paginationbtns
+        }
+        previousLinkClassName = {
+          styles.previousbtn
+        }
+        nextLinkClassName = {
+          styles.nextbtn
+        }
+        disabledClassName = {
+          styles.paginationdisabled
+        }
+        activeClassName = {
+          styles.paginationactive
+        }
 
-        />
+      />
       </div>
 
     </div>
