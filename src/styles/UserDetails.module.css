@@ -18,6 +18,8 @@
 
 .body {
   width: 80%;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .detailshead {
@@ -147,4 +149,8 @@
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 600;
+}
+
+.infocontainer{
+  background-color: #fff;
 }

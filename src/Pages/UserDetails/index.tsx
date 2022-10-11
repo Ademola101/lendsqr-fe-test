@@ -10,7 +10,7 @@ import DetailsHead from './DetailsHead';
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from './ArrowBackIcon';
 import PersonalInformation from './PersonalInformation';
-
+import Education from './Education';
 type id = string | undefined;
 const index = () => {
 
@@ -38,8 +38,14 @@ const index = () => {
           <p className= {styles.userptext}>
             User Details
           </p>
-          <DetailsHead user={User}/>
-          <PersonalInformation user={User}/>
+          <div className= {styles.infocontainer}>
+
+            <DetailsHead user={User}/>
+            <PersonalInformation user={User}/>
+            <Education user={User}/>
+
+          </div>
+
         </div>
       </div>
     </div>
