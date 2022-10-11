@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../Components/Header';
-import Sidebar from './Sidebar';
+import Sidebar from '../../Components/Sidebar';
 import { User } from './User';
 import styles from '../../styles/Dashboard.module.css';
 const index = () => {
