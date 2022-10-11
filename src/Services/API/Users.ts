@@ -8,3 +8,9 @@ export const getAllUsers = async(): Promise<UserType[]> => {
   const response = await axios.get(`${baseUrl}users`);
   return response.data;
 };
+
+
+export const getUser = async(id: string): Promise<UserType> => {
+  const response = await axios.get(`${baseUrl}users/${id}`);
+  return response.data;
+};

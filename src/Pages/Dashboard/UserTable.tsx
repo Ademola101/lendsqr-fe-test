@@ -8,6 +8,7 @@ import UserTableExcerpt from './UserTableExcerpt';
 import TableHeaderIcon from './TableHeaderIcon';
 import ArrowLeft from './ArrorLeft';
 import ArrowRight from './ArrowRight';
+import { Link } from 'react-router-dom';
 
 
 interface Paginate {
@@ -24,7 +25,9 @@ const UserTable = () => {
   const displayUsers = (users:UserType[]) => {
     const newUsers = users?.slice(pagesVisited, pagesVisited + usersPerPage);
 
-    return newUsers?.map((user, i) => <UserTableExcerpt key= {i} user= {user}/>);
+    return newUsers?.map((user, i) => <Link className= {styles.routerlink} to= {`/dashboard/users/${user.id}`} key= {i}><UserTableExcerpt user= {user}/></Link>);
+
+
   };
 
   const pageCount:number = Math.ceil(users?.length / usersPerPage);
