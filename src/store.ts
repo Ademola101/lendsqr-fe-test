@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import filterReducer from './reducers/Filter';
+import organizationReducer from './reducers/Filter/organization';
+import usernameReducer from './reducers/Filter/username';
 
 const store  = configureStore({
   reducer: {
-    filter: filterReducer
+    organization: organizationReducer,
+    username: usernameReducer
   }
 });
 export type AppDispatch = typeof store.dispatch;

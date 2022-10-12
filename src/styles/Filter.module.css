@@ -12,3 +12,19 @@
   background-color: #fff;
 }
 
+
+.filtercard {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 200px;
+  height: 600px;
+  
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  bottom: 850px;
+  right: 270px
+}

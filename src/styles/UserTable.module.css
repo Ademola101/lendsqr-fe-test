@@ -15,6 +15,9 @@
 
 
 }
+.dropdowntable {
+  height: 860px
+}
 
 .tablecontainer {
   display: flex;

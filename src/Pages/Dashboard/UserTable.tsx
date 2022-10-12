@@ -10,20 +10,32 @@ import ArrowLeft from './ArrorLeft';
 import ArrowRight from './ArrowRight';
 import { Link } from 'react-router-dom';
 import Filter from '../../Components/Filter';
-// import { useSelector } from 'react-redux';
-// import { RootState } from '../../store';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store';
 
 interface Paginate {
   selected:number
 }
 const UserTable = () => {
-  // const filterValue = useSelector((state:RootState) => state.filter);
+  const filterValue = useSelector((state:RootState) => state.organization);
   const [pageNumber,setPageNumber] = useState<number>(0);
+  const [showDropdown, setShowDropDown] = useState <boolean>(false);
+  const handleDropDown = (): void => {
+    setShowDropDown(!showDropdown);
+  };
   const { data:Users } = useQuery(['users'], getAllUsers);
   const usersPerPage = 10;
   const pagesVisited = pageNumber * usersPerPage;
 
-  // const users:UserType[]   = filterValue ? Users?.filter(({ orgName }) => orgName === filterValue ) : Users as UserType[];
+  // const filterUsers = Users?.filter((user) => {
+
+  //   if (filterValue) {
+  //     return user.orgName === filterValue.value;
+  //   }
+  //   return user;
+  // });
+
+  // const users = filterUsers as UserType[];
   const users:UserType[] = Users as UserType[];
   const displayUsers = (users:UserType[]) => {
     const newUsers = users?.slice(pagesVisited, pagesVisited + usersPerPage);
@@ -39,12 +51,12 @@ const UserTable = () => {
     setPageNumber(selected);
   };
 
-  return (
+  return ( <div className= {styles.dropdowntable}>
     <div className= {styles.tablecontainer}>
 
       <div className= {styles.tableheader}>
-        <span className= {styles.header}>Organization <TableHeaderIcon/></span>  <span className= {styles.header}>User Name <TableHeaderIcon/>
-          <Filter users={users}/>
+        <span className= {styles.header}> <div> Organization</div><TableHeaderIcon onClick={handleDropDown}/> </span>  <span className= {styles.header}>User Name <TableHeaderIcon />
+
         </span>
         <span className= {styles.header}>Email <TableHeaderIcon/></span>
         <span className= {styles.header}>Phone Number <TableHeaderIcon/></span>
@@ -78,6 +90,8 @@ showing {usersPerPage * pageNumber + 1} to {usersPerPage * pageNumber + usersPer
       </div>
 
     </div>
+    {showDropdown && <Filter users={users}/>}
+  </div>
   );
 };
 
