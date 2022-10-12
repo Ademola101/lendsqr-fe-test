@@ -50,5 +50,8 @@
 .information {
   padding: 20px;
   color: #545F7D;
-  padding-left: 60px
+  padding-left: 60px;
+  font-size: 1rem;
+    font-weight: 600;
+
 }

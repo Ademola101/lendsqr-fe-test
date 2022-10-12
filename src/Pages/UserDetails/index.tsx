@@ -11,6 +11,10 @@ import { Link } from 'react-router-dom';
 import ArrowBackIcon from './ArrowBackIcon';
 import PersonalInformation from './PersonalInformation';
 import Education from './Education';
+import Socials from './Socials';
+
+
+
 type id = string | undefined;
 const index = () => {
 
@@ -43,6 +47,7 @@ const index = () => {
             <DetailsHead user={User}/>
             <PersonalInformation user={User}/>
             <Education user={User}/>
+            <Socials user={User}/>
 
           </div>
 

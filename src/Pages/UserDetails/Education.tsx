@@ -2,12 +2,13 @@ import React from 'react';
 import PersonalExcerpt from './PersonalExcerpt';
 import styles from '../../styles/Personal.module.css';
 import { UserType } from '../../../types';
-interface PersonalInformationProps {
+interface EducationProps {
   user: UserType
 }
 
-const Education = ({ user }:PersonalInformationProps) => {
-  const monthlyIncomeRange = `${user?.education.monthlyIncome[0]} - ${user?.education.monthlyIncome[1]}`;
+const Education = ({ user }:EducationProps) => {
+  const monthlyIncomeRange = `₦${user?.education.monthlyIncome[0]} - ₦${user?.education.monthlyIncome[1]}`;
+  const loanRepayment  = `₦${user?.education.loanRepayment}`;
   return (
     <div>
       <div className= {styles.bodycontainer}>
@@ -22,7 +23,7 @@ const Education = ({ user }:PersonalInformationProps) => {
           <PersonalExcerpt name= ' duration of employement ' value= {user?.education.duration}/>
           <PersonalExcerpt name= ' office email ' value= {user?.education.officialEmail}/>
           <PersonalExcerpt name= ' Monthly income ' value= {monthlyIncomeRange}/>
-          <PersonalExcerpt name= ' loan repayment ' value= {user?.education.loanRepayment}/>
+          <PersonalExcerpt name= ' loan repayment ' value= {loanRepayment}/>
         </div>
 
       </div>
