@@ -12,7 +12,7 @@ import ArrowBackIcon from './ArrowBackIcon';
 import PersonalInformation from './PersonalInformation';
 import Education from './Education';
 import Socials from './Socials';
-
+import Guarantor from './Guarantor';
 
 
 type id = string | undefined;
@@ -48,6 +48,7 @@ const index = () => {
             <PersonalInformation user={User}/>
             <Education user={User}/>
             <Socials user={User}/>
+            <Guarantor user={User}/>
 
           </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Sidebar.module.css';
-import CustomerLinks from '../Pages/Dashboard/CustomerLink';
+import CustomerLinks from './CustomerLink';
 
 const Sidebar = () => {
   return (
