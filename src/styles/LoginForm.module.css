@@ -81,8 +81,17 @@
     width: 100%;
   }
   .loginButton {
-    width: 100%;
+    width: 108%;
     padding: 0 10px
   }
-  
+
+  .showHidePassword {
+    left: 80%;
+  }
+  .loginButtonShow {
+    width: 100%;
+    padding: 0 10px;
+    position: relative;
+    bottom: 0px;
+  }
 }

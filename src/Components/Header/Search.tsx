@@ -7,7 +7,7 @@ import SearchIcon from './SearchIcon';
 
 const Search = () => {
   return (
-    <div>
+    <div className= {styles.searchcontainer}>
 
       <input type="text" placeholder='search for anything'  className= {styles.searchinput}/>
       <div className= {styles.searchicon}>

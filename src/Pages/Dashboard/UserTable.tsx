@@ -23,8 +23,8 @@ const UserTable = () => {
   const usersPerPage = 10;
   const pagesVisited = pageNumber * usersPerPage;
 
-  const users:UserType[]   = filterValue ? Users?.filter(({ orgName }) => orgName === filterValue ) : Users as UserType[];
-
+  // const users:UserType[]   = filterValue ? Users?.filter(({ orgName }) => orgName === filterValue ) : Users as UserType[];
+  const users:UserType[] = Users as UserType[];
   const displayUsers = (users:UserType[]) => {
     const newUsers = users?.slice(pagesVisited, pagesVisited + usersPerPage);
 
