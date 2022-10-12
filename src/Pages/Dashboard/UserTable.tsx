@@ -9,7 +9,7 @@ import TableHeaderIcon from './TableHeaderIcon';
 import ArrowLeft from './ArrorLeft';
 import ArrowRight from './ArrowRight';
 import { Link } from 'react-router-dom';
-
+import Filter from '../../Components/Filter';
 
 interface Paginate {
   selected:number
@@ -40,7 +40,9 @@ const UserTable = () => {
     <div className= {styles.tablecontainer}>
 
       <div className= {styles.tableheader}>
-        <span className= {styles.header}>Organization <TableHeaderIcon/></span>  <span className= {styles.header}>User Name <TableHeaderIcon/></span>
+        <span className= {styles.header}>Organization <TableHeaderIcon/></span>  <span className= {styles.header}>User Name <TableHeaderIcon/>
+          <Filter users={users}/>
+        </span>
         <span className= {styles.header}>Email <TableHeaderIcon/></span>
         <span className= {styles.header}>Phone Number <TableHeaderIcon/></span>
         <span className= {styles.header}>Date joined <TableHeaderIcon/></span> <span className= {styles.header}>Status  <TableHeaderIcon/></span>
