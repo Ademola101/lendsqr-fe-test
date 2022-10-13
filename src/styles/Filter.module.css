@@ -18,7 +18,7 @@
   flex-direction: column;
   margin: 0 auto;
   width: 200px;
-  height: 600px;
+  height: 400px;
   
   padding: 20px;
   border: 1px solid #ccc;
@@ -26,7 +26,13 @@
   background-color: #fff;
   position: relative;
   bottom: 850px;
-  right: 270px
+  right: 270px;
+  overflow:auto
+}
+
+.cancelicon {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .usernameinput {

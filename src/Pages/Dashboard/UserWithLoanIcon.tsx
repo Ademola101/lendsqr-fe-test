@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserWithLoanIcon = () => {
   return (
-    <div><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div><svg width="25" height="25" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle opacity="0.1" cx="20" cy="20" r="20" fill="#F55F44"/>
       <path d="M12.9617 11.4V27.4118H19.3157V26.2118H14.1617V12.6H20.1999V16.9578H24.3155V20.6538H25.5155V15.9256L21.0881 11.3998L12.9617 11.4ZM21.3999 13.436L23.6741 15.7578H21.3999V13.436Z" fill="#F55F44"/>
       <path d="M15.3938 19.3524H22.604V20.5524H15.3938V19.3524Z" fill="#F55F44"/>

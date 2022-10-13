@@ -14,9 +14,22 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 0 10px;
-  font-size: 16px;
+  font-size: 0.8rem;
   color: #424242;
   outline: none;
   margin-bottom: 10px;
   background-color: #fff;
+  color: #545F7D;
+  text-transform: uppercase;
+}
+
+.number {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #545F7D;
 }

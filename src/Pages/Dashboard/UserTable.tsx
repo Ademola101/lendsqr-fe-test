@@ -10,8 +10,11 @@ import ArrowLeft from './ArrorLeft';
 import ArrowRight from './ArrowRight';
 import { Link } from 'react-router-dom';
 import Filter from '../../Components/Filter';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { AppDispatch } from '../../store';
 import { RootState } from '../../store';
+import { showDropDown } from '../../reducers/Filter/dropdown';
+
 
 interface Paginate {
   selected:number
@@ -19,10 +22,15 @@ interface Paginate {
 const UserTable = () => {
   // const filterValue = useSelector((state:RootState) => state.organization);
   const [pageNumber,setPageNumber] = useState<number>(0);
-  const [showDropdown, setShowDropDown] = useState <boolean>(false);
+
+  const dispatch:AppDispatch = useDispatch();
+  const showDropdown = useSelector((state:RootState) => state.dropdown);
   const handleDropDown = (): void => {
-    setShowDropDown(!showDropdown);
+    dispatch(showDropDown());
+
+
   };
+
   const { data:Users } = useQuery(['users'], getAllUsers);
   const usersPerPage = 10;
   const pagesVisited = pageNumber * usersPerPage;

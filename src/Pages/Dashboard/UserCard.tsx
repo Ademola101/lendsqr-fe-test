@@ -26,9 +26,9 @@ const UserCard = ({ user }:Props) => {
         {user.icon}
       </div>
       <div>
-        <div>{user.title}</div>
+        <div className= {styles.text}>{user.title}</div>
       </div>
-      <div>
+      <div className={styles.number}>
         {user.numbers}
       </div>
 
@@ -43,6 +43,7 @@ const UsersCard = () => {
   const users:UserType[] | undefined = Users;
   const totalUsers:number|undefined = users?.length;
 
+  const usersWithLoan:number|undefined = users?.filter((user) => user.education.loanRepayment).length;
 
 
 
@@ -59,7 +60,8 @@ const UsersCard = () => {
 
     {
       icon:<UserWithLoanIcon/>,
-      title: 'Users with loan'
+      title: 'Users with loan',
+      numbers: usersWithLoan?.toString()
     },
     {
       icon:<UserWithSavingIcon/>,

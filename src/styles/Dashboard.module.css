@@ -13,6 +13,7 @@
   overflow: auto;
   height: 100vh;
   
+  
 }
 
 .user {
@@ -20,7 +21,8 @@
   
   gap: 10px;
   align-items: center;
-  width: auto;
+  width: 80%;
+
 }
 
 @media screen and (max-width: 768px) {
