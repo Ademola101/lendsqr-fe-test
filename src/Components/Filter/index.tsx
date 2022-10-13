@@ -31,7 +31,7 @@ const index = ({ users }:Props) => {
   return (
     <div className= {styles.filtercard}>
       <div className= {styles.cancelicon}>
-        <MdOutlineCancel size={20} onClick = {handleDropDown}/>
+        <MdOutlineCancel size={20} onClick = {handleDropDown} color = '#545F7D;'/>
       </div>
 
 

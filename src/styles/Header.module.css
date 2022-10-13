@@ -98,5 +98,25 @@
   bottom: 0;
   height: 30px;
 }
-  
+  .headercontainer {
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .smallLogo {
+    width: 15px;
+
+  }
+
+  .bigLogo {
+    
+    width: 80px;
+
+  }
+
+  .belliconcontainer {
+    margin-left: 0;
+  }
 }

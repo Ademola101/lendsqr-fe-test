@@ -33,3 +33,15 @@
   font-weight: 600;
   color: #545F7D;
 }
+
+@media screen and (max-width: 768px) {
+  .container {flex-wrap: wrap;
+  margin: 0;
+  }
+
+  .card {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+}
+  
