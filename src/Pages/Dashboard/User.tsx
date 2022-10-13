@@ -5,8 +5,9 @@ import UserTable from './UserTable';
 export const User = () => {
   return (
     <div className= {styles.container}>
-      <h2 className= {styles.usertext}>Users</h2>
+      <div className= {styles.usertext}>Users</div>
       <div className= {styles.dashpage}>
+
         <UsersCard/>
 
       </div>

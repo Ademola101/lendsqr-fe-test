@@ -16,7 +16,8 @@
 
 }
 .dropdowntable {
-  height: 860px
+  height: 860px;
+  
 }
 
 .tablecontainer {
@@ -183,3 +184,11 @@
   color: #545F7D;
   
 }
+
+@media (max-width: 768px) {
+  .dropdowntable {
+    width: 100vw;
+  }
+}
+  
+

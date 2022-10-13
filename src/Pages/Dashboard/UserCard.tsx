@@ -22,6 +22,7 @@ interface Props {
 const UserCard = ({ user }:Props) => {
   return (
     <div className= {styles.card}>
+
       <div>
         {user.icon}
       </div>
@@ -43,7 +44,8 @@ const UsersCard = () => {
   const users:UserType[] | undefined = Users;
   const totalUsers:number|undefined = users?.length;
 
-  const usersWithLoan:number|undefined = users?.filter((user) => user.education.loanRepayment).length;
+  const usersWithLoan:number|undefined = users?.filter((user) => user.education.loanRepayment!== '0').length;
+  const userWithSavings:number|undefined = users?.filter((user) => user.accountBalance !=='0').length;
 
 
 
@@ -55,7 +57,8 @@ const UsersCard = () => {
     },
     {
       icon:<ActiveUserIcon/>,
-      title: 'Active Users'
+      title: 'Active Users',
+      numbers: totalUsers?.toString()
     },
 
     {
@@ -65,7 +68,8 @@ const UsersCard = () => {
     },
     {
       icon:<UserWithSavingIcon/>,
-      title: 'Users with saving'
+      title: 'Users with saving',
+      numbers: userWithSavings?.toString()
     }
   ];
 
