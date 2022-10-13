@@ -56,3 +56,8 @@ export interface UserType {
 
 
 
+export interface Link {
+  name: string;
+  icon?: JSX.Element;
+
+}

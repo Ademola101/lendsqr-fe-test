@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from '../styles/Sidebar.module.css';
 
+
 type Link= {
   name: string;
-  link?: string;
-  icon?: string;
+  icon?: JSX.Element;
 
 }
 
@@ -37,8 +37,27 @@ const customer:Link[] = [
   }
 ];
 const business:Link[] = [
-  { name:'Organization' },
-  { name:'Loan requests' },
+  { name:'Organization',
+    icon: <i className="fas fa-building"></i>
+
+
+
+  },
+  { name:'Loan Requests' },
+  { name:'Savings Products' },
+  { name: 'Fees and Charges' },
+  { name: 'Transactions' },
+  { name: 'Services' },
+  { name: 'ServiceAccount' },
+  { name: 'Settlement' },
+  { name: 'Reports' },
+];
+
+const settings:Link[] = [
+  { name: 'Preferences' },
+  { name: 'Fees and Pricing' },
+  { name: 'Audit Logs' },
+
 ];
 
 const CustomerLink = ({ link }:Props) => {
@@ -63,6 +82,10 @@ const CustomerLinks = () => {
       <p> Business</p>
       <div>
         {business.map((link, i) => <CustomerLink link={link} key ={i}/>)}
+      </div>
+      <p> Settings</p>
+      <div>
+        {settings.map((link, i) => <CustomerLink link={link} key ={i}/>)}
       </div>
     </div>
   );

@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from '../styles/Sidebar.module.css';
 import CustomerLinks from './CustomerLink';
+import SwitchLink from '../Components/LinksIcon/SwitchIcon';
 
 const Sidebar = () => {
   return (
     <div className= {styles.container}>
       <div className= {styles.switchcontainer}>
-        <a className= {styles.switch} href="#"> Switch Organization</a>
+        <a className= {styles.switch} href="#"><SwitchLink/>  Switch Organization </a>
 
 
         <div>

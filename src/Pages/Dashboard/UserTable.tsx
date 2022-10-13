@@ -17,7 +17,7 @@ interface Paginate {
   selected:number
 }
 const UserTable = () => {
-  const filterValue = useSelector((state:RootState) => state.organization);
+  // const filterValue = useSelector((state:RootState) => state.organization);
   const [pageNumber,setPageNumber] = useState<number>(0);
   const [showDropdown, setShowDropDown] = useState <boolean>(false);
   const handleDropDown = (): void => {
