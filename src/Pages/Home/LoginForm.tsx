@@ -4,6 +4,9 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate } from 'react-router-dom';
+import { setCredentials } from '../../reducers/Auth';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../store';
 
 type Data = {
   email: string;
@@ -16,9 +19,12 @@ const Credentials = {
 };
 
 const LoginForm = () => {
+
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [error, setError] = useState<string>('');
   const navigate = useNavigate();
 
+  const dispatch = useDispatch<AppDispatch>();
   const schema = yup.object().shape({
     email: yup.string().email().required(),
     password: yup.string().required(),
@@ -33,6 +39,13 @@ const LoginForm = () => {
 
     ) {
       navigate('/dashboard');
+      dispatch(setCredentials(data));
+    }
+    else {
+      setError('Invalid Credentials');
+      setTimeout(() => {
+        setError('');
+      }, 3000);
     }
   };
   const passwordValue = watch('password');
@@ -50,6 +63,9 @@ const LoginForm = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
 
       <div className= {styles.container}>
+        <div>
+          {error !== '' && <p className={styles.error}>{error}</p>}
+        </div>
 
         <div>
           <input className= {styles.input} type="email" placeholder="Email" {...register('email')} />
@@ -61,14 +77,20 @@ const LoginForm = () => {
         <div>
           <input className= {styles.input} type={ showPassword ? 'text' : 'password'} placeholder="Password" {...register('password')}  />
           <p className= {styles.error}>{errors.password?.message}</p>
+          <div className= {styles.forgotPassword}>
+            Forgot Password?
+          </div>
+
           {passwordValue && <div className= {styles.showHidePassword}  onClick={togglePassword}>{showPassword ? 'Hide' : 'Show'}</div>}
 
         </div>
+
       </div>
 
       <button type='submit' className={passwordValue ? styles.loginButtonShow : styles.loginButton}>
          LOG IN
       </button>
+
     </form>
   );
 };

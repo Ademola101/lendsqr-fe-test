@@ -36,7 +36,7 @@
 
 .error{
   color: red;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 
 .input {
@@ -45,10 +45,11 @@
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   padding: 0 10px;
-  font-size: 16px;
-  color: #424242;
+  font-size: 0.8rem;
+  color:#545F7D;
   outline: none;
   margin-bottom: 10px;
+
 
 }
 
@@ -71,8 +72,21 @@
   margin-bottom: 10px;
   cursor: pointer;
   position: relative;
-  top: -50px;
+  top: -95px; 
   left: 60%;
+}
+
+.forgotPassword {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 0.7rem;
+  color: #39CDCC;
+  outline: none;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 @media (max-width:768px) {

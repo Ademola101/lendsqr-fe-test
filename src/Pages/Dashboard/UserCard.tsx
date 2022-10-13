@@ -4,8 +4,6 @@ import ActiveUserIcon from './ActiveUserIcon';
 import styles from '../../styles/Usercard.module.css';
 import UserWithLoanIcon from './UserWithLoanIcon';
 import UserWithSavingIcon from './UserWithSavingIcon';
-import { getAllUsers } from '../../Services/API/Users';
-import { useQuery } from '@tanstack/react-query';
 import { UserType } from '../../../types';
 
 
@@ -14,12 +12,17 @@ icon: JSX.Element;
 title?: string;
 numbers?: string;
 }
-interface Props {
-  user:User
+interface UserCardProps {
+  user:User,
+
 
 }
 
-const UserCard = ({ user }:Props) => {
+interface Props {
+  users: UserType[] | undefined;
+}
+
+const UserCard = ({ user }:UserCardProps) => {
   return (
     <div className= {styles.card}>
 
@@ -39,9 +42,7 @@ const UserCard = ({ user }:Props) => {
 
 
 
-const UsersCard = () => {
-  const { data:Users, isLoading, isError } = useQuery(['users'], getAllUsers);
-  const users:UserType[] | undefined = Users;
+const UsersCard = ({ users }:Props) => {
   const totalUsers:number|undefined = users?.length;
 
   const usersWithLoan:number|undefined = users?.filter((user) => user.education.loanRepayment!== '0').length;
@@ -73,14 +74,6 @@ const UsersCard = () => {
     }
   ];
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (isError) {
-    return <div>Error...</div>;
-
-  }
   return (
 
 

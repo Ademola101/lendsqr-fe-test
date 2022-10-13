@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
 import { UserType } from '../../../types';
-import { getAllUsers } from '../../Services/API/Users';
+
 import styles from '../../styles/UserTable.module.css';
 import ReactPaginate from 'react-paginate';
 import UserTableExcerpt from './UserTableExcerpt';
@@ -19,7 +18,10 @@ import { showDropDown } from '../../reducers/Filter/dropdown';
 interface Paginate {
   selected:number
 }
-const UserTable = () => {
+interface Props {
+  usersProp: UserType[] | undefined;
+}
+const UserTable = ({ usersProp }:Props) => {
   // const filterValue = useSelector((state:RootState) => state.organization);
   const [pageNumber,setPageNumber] = useState<number>(0);
 
@@ -31,7 +33,7 @@ const UserTable = () => {
 
   };
 
-  const { data:Users } = useQuery(['users'], getAllUsers);
+
   const usersPerPage = 10;
   const pagesVisited = pageNumber * usersPerPage;
 
@@ -44,7 +46,7 @@ const UserTable = () => {
   // });
 
   // const users = filterUsers as UserType[];
-  const users:UserType[] = Users as UserType[];
+  const users:UserType[] = usersProp as UserType[];
   const displayUsers = (users:UserType[]) => {
     const newUsers = users?.slice(pagesVisited, pagesVisited + usersPerPage);
 
