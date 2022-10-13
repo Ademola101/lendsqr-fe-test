@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { setCredentials } from '../../reducers/Auth';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store';
+import { setLocalStorageItem } from '../../Services/localStorage';
 
 type Data = {
   email: string;
@@ -40,6 +41,7 @@ const LoginForm = () => {
     ) {
       navigate('/dashboard');
       dispatch(setCredentials(data));
+      setLocalStorageItem('credentials', JSON.stringify(data));
     }
     else {
       setError('Invalid Credentials');
