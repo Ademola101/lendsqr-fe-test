@@ -42,5 +42,11 @@
     padding: 0;
     
   }
+
+  .container {
+    background-color: rgb(247 247 247);
+    height: 100%;
+    width: 100%;
+  }
 }
   

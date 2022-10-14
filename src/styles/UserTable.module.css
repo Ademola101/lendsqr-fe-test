@@ -195,6 +195,13 @@
   .excerptcontainer {
     width: 100vw;
   }
+  .tablecontainer{
+    margin: 10px;
+  }
+
+  .headerorg {
+    width: 100%;
+  }
 }
   
 
