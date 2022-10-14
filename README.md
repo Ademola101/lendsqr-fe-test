@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Lendsqr - A lending platform for the 21st century
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<table>
+<tr>
+<td>
+  Lendsqr is a lending platform that allows users to lend and borrow money from each other. It is built with the following technologies:
+</td>
+</tr>
+</table>
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+Lendsqr is a lending platform that allows users to lend and borrow money from each other. It is built with the following technologies:
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Desktop View
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Home Page
 
-### `npm test`
+![Home Page](/screenshots/web_home.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Dashboard
 
-### `npm run build`
+![Dashboard](/screenshots/web_dash.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### User Details
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![User Details](/screenshots/web_details.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Demo
 
-### `npm run eject`
+Here is a working live demo : [Lendsqr](https://ademola-ogunmokun-lendsqr-fe-test.netlify.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Built with
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps.
+- [React-Query](https://react-query.tanstack.com/) - Performant and powerful data synchronization for React.
+- [React-hook-form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<!-- Home Screen            |   Dashboard Screen | User Details Screen
+:-------------------------:|:-------------------------: |:-------------------------:
+![Main](/screenshots/web_home.png)  |  ![Chart](/screenshots/web_dash.png) | ![Chart](/img/chart.png) -->
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+👤 **Author**
 
-## Learn More
+- GitHub: [@Ademola101](https://github.com/Ademola101)
+- Twitter: [@ademola_isr](https://twitter.com/ademola_isr)
+- LinkedIn: [Ademola Ogunmokun](https://linkedin.com/in/ademola-ogunmokun-492575203)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Ademola101/Assest-Price/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
