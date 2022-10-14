@@ -14,19 +14,15 @@ Lendsqr is a lending platform that allows users to lend and borrow money from ea
 
 ## Screenshots
 
-## Desktop View
+- Desktop View
+    - - Home Page
+  - ![Home Page](/screenshots/web_home.png)
 
-### Home Page
-
-![Home Page](/screenshots/web_home.png)
-
-### Dashboard
-
-![Dashboard](/screenshots/web_dash.png)
-
-### User Details
-
-![User Details](/screenshots/web_details.png)
+    - - Dashboard
+  - ![Dashboard](/screenshots/web_dash.png)
+  
+    - - User Details
+  - ![User Details](/screenshots/web_details.png)
 
 ## Demo
 
@@ -44,7 +40,7 @@ Here is a working live demo : [Lendsqr](https://ademola-ogunmokun-lendsqr-fe-tes
 :-------------------------:|:-------------------------: |:-------------------------:
 ![Main](/screenshots/web_home.png)  |  ![Chart](/screenshots/web_dash.png) | ![Chart](/img/chart.png) -->
 
-👤 **Author**
+## 👤 **Author**
 
 - GitHub: [@Ademola101](https://github.com/Ademola101)
 - Twitter: [@ademola_isr](https://twitter.com/ademola_isr)
