@@ -11,7 +11,7 @@ export const User = () => {
   const users: UserType[] |  undefined = data;
 
   while (isLoading) {
-    return  <div className= {styles.loading}><BeatLoader color={'#123abc'} loading={isLoading} size={20} />;</div>;
+    return  <div className= {styles.loading}><BeatLoader color={'#123abc'} loading={isLoading} size={20} /></div>;
 
 
 
