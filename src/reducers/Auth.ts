@@ -18,9 +18,16 @@ const authSlice = createSlice({
       state.email = email;
       state.password = password;
       return state;
+    },
+
+    removeCredentials(state): AuthState {
+      state.email = null;
+      state.password = null;
+      return state;
     }
-  }
+  },
+
 });
 
-export const { setCredentials } = authSlice.actions;
+export const { setCredentials, removeCredentials } = authSlice.actions;
 export default authSlice.reducer;
