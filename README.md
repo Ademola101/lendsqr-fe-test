@@ -14,13 +14,13 @@ Lendsqr is a lending platform that allows users to lend and borrow money from ea
 ## Screenshots
 
 - Desktop View
-    - - Home Page
+  - - Home Page
   - ![Home Page](/screenshots/web_home.png)
 
-    - - Dashboard
+      - - Dashboard
   - ![Dashboard](/screenshots/web_dash.png)
   
-    - - User Details
+      - - User Details
   - ![User Details](/screenshots/web_details.png)
 
 ## Demo
@@ -67,9 +67,8 @@ npm start
 ```
 
 ```bash
-<!-- Home Screen            |   Dashboard Screen | User Details Screen
-:-------------------------:|:-------------------------: |:-------------------------:
-![Main](/screenshots/web_home.png)  |  ![Chart](/screenshots/web_dash.png) | ![Chart](/img/chart.png) -->
+The server should start on port 3000
+```
 
 ## 👤 **Author**
 
