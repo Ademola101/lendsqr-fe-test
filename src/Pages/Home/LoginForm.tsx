@@ -15,7 +15,7 @@ type Data = {
 }
 
 const Credentials = {
-  email: 'ademola@yahoo.com',
+  email: 'test@email.com',
   password: '123456'
 };
 

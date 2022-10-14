@@ -14,18 +14,22 @@ Lendsqr is a lending platform that allows users to lend and borrow money from ea
 ## Screenshots
 
 - Desktop View
-  - - Home Page
+    - - Home Page
   - ![Home Page](/screenshots/web_home.png)
 
-      - - Dashboard
+    - - Dashboard
   - ![Dashboard](/screenshots/web_dash.png)
   
-      - - User Details
+    - - User Details
   - ![User Details](/screenshots/web_details.png)
 
 ## Demo
 
 Here is a working live demo : [Lendsqr](https://ademola-ogunmokun-lendsqr-fe-test.netlify.app/)
+ Login Details
+
+- Email:test@email.com
+- password:123456
 
 ## Built with
 
