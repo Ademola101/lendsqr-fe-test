@@ -1,16 +1,15 @@
 # Lendsqr - A lending platform for the 21st century
 
-<table>
-<tr>
-<td>
-  Lendsqr is a lending platform that allows users to lend and borrow money from each other. It is built with the following technologies:
-</td>
-</tr>
-</table>
-
 ## Project Description
 
 Lendsqr is a lending platform that allows users to lend and borrow money from each other. It is built with the following technologies:
+
+## User Stories
+
+- User can sign in
+- Authenticated user can  view  all customers information and loan details on their dashboard
+- Authenticated user can  view each customer information and loan details
+- Authenticated user can filter customers by name, organization, email, phone number, loan amount, and loan status
 
 ## Screenshots
 
@@ -36,6 +35,38 @@ Here is a working live demo : [Lendsqr](https://ademola-ogunmokun-lendsqr-fe-tes
 - [React-Query](https://react-query.tanstack.com/) - Performant and powerful data synchronization for React.
 - [React-hook-form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
 
+## Prerequisites
+
+- [Node.js](https://nodejs.org/en/) - A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [Git](https://git-scm.com/) - Free and open source distributed version control system.
+
+## Installation
+
+- Clone the repository
+
+```
+git clone https://github.com/Ademola101/lendsqr-fe-test
+```
+
+- Change directory into the project folder
+
+```bash
+cd lendsqr-fe-test
+```
+
+- Install dependencies
+
+```bash
+npm install
+```
+
+- Start the development server
+
+```bash
+npm start
+```
+
+```bash
 <!-- Home Screen            |   Dashboard Screen | User Details Screen
 :-------------------------:|:-------------------------: |:-------------------------:
 ![Main](/screenshots/web_home.png)  |  ![Chart](/screenshots/web_dash.png) | ![Chart](/img/chart.png) -->
@@ -50,7 +81,7 @@ Here is a working live demo : [Lendsqr](https://ademola-ogunmokun-lendsqr-fe-tes
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Ademola101/Assest-Price/issues).
+Feel free to check the [issues page](https://github.com/Ademola101/lendsqr-fe-test/issues).
 
 ## Show your support
 

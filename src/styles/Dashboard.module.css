@@ -37,6 +37,9 @@
   .sidebar {
     display: none;
   }
+  .user{
+    width: 100%;
+  }
 
   
 }

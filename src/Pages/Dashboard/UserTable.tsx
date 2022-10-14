@@ -65,10 +65,8 @@ const UserTable = ({ usersProp }:Props) => {
     <div className= {styles.tablecontainer}>
 
       <div className= {styles.tableheader}>
-        <span className= {styles.header}> <div> Organization</div><TableHeaderIcon onClick={handleDropDown}/> </span>
-        <span className= {styles.header}>User Name <TableHeaderIcon onClick={handleDropDown}/>
-
-        </span>
+        <span className= {styles.header}>  Organization<TableHeaderIcon onClick={handleDropDown}/> </span>
+        <span className= {styles.header}>User Name <TableHeaderIcon onClick={handleDropDown}/></span>
         <span className= {styles.header}>Email <TableHeaderIcon onClick={handleDropDown}/></span>
         <span className= {styles.header}>Phone Number <TableHeaderIcon onClick={handleDropDown}/></span>
         <span className= {styles.header}>Date joined <TableHeaderIcon onClick={handleDropDown}/></span>
