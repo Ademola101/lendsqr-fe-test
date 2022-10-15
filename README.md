@@ -2,11 +2,11 @@
 
 ## Project Description
 
-Lendsqr is a lending platform that allows users to lend and borrow money from each other. It is built with the following technologies:
+Lendsqr is a lending platform that allows users to lend and borrow money from each other. 
 
 ## User Stories
 
-- User can sign in
+- User can sign 
 - Authenticated user can  view  all customers information and loan details on their dashboard
 - Authenticated user can  view each customer information and loan details
 - Authenticated user can filter customers by name, organization, email, phone number, loan amount, and loan status
