@@ -193,10 +193,12 @@
     width: auto;
   }
   .excerptcontainer {
-    width: 100vw;
+    width: 700px;
   }
   .tablecontainer{
     margin: 10px;
+    width: 800px;
+    justify-content: space-between;
   }
 
   .headerorg {

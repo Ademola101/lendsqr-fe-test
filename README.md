@@ -2,11 +2,11 @@
 
 ## Project Description
 
-Lendsqr is a lending platform that allows users to lend and borrow money from each other. 
+Lendsqr is a lending platform that allows users to lend and borrow money from each other.
 
 ## User Stories
 
-- User can sign 
+- User can sign
 - Authenticated user can  view  all customers information and loan details on their dashboard
 - Authenticated user can  view each customer information and loan details
 - Authenticated user can filter customers by name, organization, email, phone number, loan amount, and loan status
@@ -14,22 +14,22 @@ Lendsqr is a lending platform that allows users to lend and borrow money from ea
 ## Screenshots
 
 - Desktop View
-    - - Home Page
+  - - Home Page
   - ![Home Page](/screenshots/web_home.png)
 
-    - - Dashboard
+      - - Dashboard
   - ![Dashboard](/screenshots/web_dash.png)
   
-    - - User Details
+      - - User Details
   - ![User Details](/screenshots/web_details.png)
 
 ## Demo
 
 Here is a working live demo : [Lendsqr](https://ademola-ogunmokun-lendsqr-fe-test.netlify.app/)
- 
+
 - Login Details
-- - Email:test@email.com
-- - password:123456
+  - - Email:test@email.com
+  - - password:123456
 
 ## Built with
 
