@@ -5,11 +5,12 @@ import styles from '../../styles/Filter.module.css';
 import FilterInput from './FilterInput';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store';
-import { setUsername } from '../../reducers/Filter/username';
-import { setEmail } from '../../reducers/Filter/email';
+import { setUsername } from '../../reducers/Filter/filter';
+import { setEmail } from '../../reducers/Filter/filter';
 import Select from 'react-select';
 import { MdOutlineCancel } from 'react-icons/md';
 import { showDropDown } from '../../reducers/Filter/dropdown';
+import ResetAndFilter from './ResetAndFilter';
 
 
 type Props = {
@@ -29,7 +30,7 @@ const index = ({ users }:Props) => {
   };
 
   return (
-    <div className= {styles.filtercard}>
+    <form className= {styles.filtercard}>
       <div className= {styles.cancelicon}>
         <MdOutlineCancel className= {styles.icon} size={20} onClick = {handleDropDown} color = '#545F7D;'/>
       </div>
@@ -51,8 +52,9 @@ const index = ({ users }:Props) => {
           ]}
         />
       </div>
+      <ResetAndFilter />
 
-    </div>
+    </form>
   );
 };
 
