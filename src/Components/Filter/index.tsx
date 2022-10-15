@@ -52,7 +52,7 @@ const index = ({ users }:Props) => {
   };
 
   return (
-    <form onSubmit={onSubmithandle} className= {styles.filtercard}>
+    <form onSubmit={onSubmithandle} className= {styles.filtercardanimation}>
       <div className= {styles.cancelicon}>
         <MdOutlineCancel className= {styles.icon} size={20} onClick = {handleDropDown} color = '#545F7D;'/>
       </div>

@@ -13,7 +13,7 @@
 }
 
 
-.filtercard {
+.filtercardanimation {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -26,6 +26,9 @@
   position: relative;
   bottom: 810px;
   right: 170px;
+  animation: slidein 1s ease-in-out;
+
+  
 }
 
 .cancelicon {
