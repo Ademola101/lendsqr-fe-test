@@ -49,6 +49,7 @@ export interface UserType {
   accountNumber: string;
   socials: Socials;
   education: Education;
+  status: string;
   id: string;
 }
 

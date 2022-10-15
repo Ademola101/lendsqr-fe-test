@@ -4,6 +4,11 @@ import styles from '../styles/Sidebar.module.css';
 import UserLinkIcon from './LinksIcon/UserLinkIcon';
 import LoanSackIcon from './LinksIcon/LoanSackIcon';
 import DecisionIcon from './LinksIcon/DecisionIcon';
+import SavingIcon from './LinksIcon/SavingIcon';
+import Lrequest from './LinksIcon/Lrequest';
+import WhiteListIcon from './LinksIcon/WhiteListIcon';
+import KarmaIcon from './LinksIcon/KarmaIcon';
+import OrganiIcon from './LinksIcon/OrganiIcon';
 
 type Link= {
   name: string;
@@ -31,17 +36,22 @@ const customer:Link[] = [
   },
   {
     name: 'Savings',
+    icon: <SavingIcon/>
   },
   {
     name: 'Loan Requests',
+    icon: <Lrequest/>
   },
   {
-    name: 'Whitelist'
+    name: 'Whitelist',
+    icon: <WhiteListIcon/>
   },
   {
-    name:' Karma'
+    name:' Karma',
+    icon: <KarmaIcon/>
   }
 ];
+
 const business:Link[] = [
   { name:'Organization',
     icon: <i className="fas fa-building"></i>

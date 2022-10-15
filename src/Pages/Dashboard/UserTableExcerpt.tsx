@@ -29,7 +29,11 @@ const UserTableExcerpt = ({ user }:UserTableProps) => {
         <span className= {styles.headertext}>{user.email}</span>
         <span className= {styles.headertext}>{user.phoneNumber}</span>
         <span className= {styles.headertext}>{setDateFormat(user.createdAt)}</span>
-        <span className= {styles.headertextstatus}>Active <StatusVectorIcon/></span>
+        <span className= {user.status === 'Active' ? styles.active
+          : user.status === 'Inactive'
+            ? styles.inactive : user.status === 'Pending'
+              ? styles.pending :
+              styles.blacklisted}> {user.status} <StatusVectorIcon/></span>
       </div>
     </div>
   );

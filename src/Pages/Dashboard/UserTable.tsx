@@ -7,7 +7,6 @@ import UserTableExcerpt from './UserTableExcerpt';
 import TableHeaderIcon from './Icons/TableHeaderIcon';
 import ArrowLeft from './Icons/ArrorLeft';
 import ArrowRight from './Icons/ArrowRight';
-import { Link } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
 
@@ -28,11 +27,13 @@ const UserTable = ({ usersProp, handleDropDown }:Props) => {
 
   const users:UserType[] = (usersProp as UserType[]);
 
+
+
   const filterUsers = filterValue ? users.filter((user ) => user.orgName === filterValue) : users;
   const displayUsers = () => {
     const newUsers = filterUsers?.slice(pagesVisited, pagesVisited + usersPerPage);
 
-    return newUsers?.map((user, i) => <Link className= {styles.routerlink} to= {`/dashboard/users/${user.id}`} key= {i}><UserTableExcerpt user= {user}/></Link>);
+    return newUsers?.map((user) => <UserTableExcerpt user= {user} key = {user.id}/>);
 
 
   };
