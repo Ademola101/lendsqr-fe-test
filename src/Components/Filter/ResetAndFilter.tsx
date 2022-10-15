@@ -1,11 +1,11 @@
 import React from 'react';
-// import styles from '../../styles/Filter.module.css';
+import styles from '../../styles/Filter.module.css';
 
 const ResetAndFilter = () => {
   return (
-    <div>
+    <div className= {styles.resetfiltercontainer}>
 
-      <button type='reset'>Reset</button> <button type='submit'> Filter</button>
+      <button className= {styles.resetbutton} type='reset'>Reset</button> <button className= {styles.filterbutton} type='submit'> Filter</button>
     </div>
   );
 };

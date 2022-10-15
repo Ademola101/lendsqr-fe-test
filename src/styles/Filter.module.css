@@ -17,8 +17,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 200px;
-  height: 400px;
+  width: 250px;
   
   padding: 20px;
   border: 1px solid #ccc;
@@ -26,8 +25,7 @@
   background-color: #fff;
   position: relative;
   bottom: 810px;
-  right: 370px;
-  overflow:auto
+  right: 170px;
 }
 
 .cancelicon {
@@ -54,4 +52,56 @@
   border-radius: 5px;
   background-color: #fff;
   outline: oldlace;
+}
+
+.filterbutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #39CDCC;
+  outline: oldlace;
+  padding: 10px;
+  color: #fff;
+}
+
+.resetbutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  color: #545F7D;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: oldlace;
+}
+
+.resetfiltercontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+gap: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+ 
+}
+.filterbutton:hover {
+  background-color: #fff;
+  color: #39CDCC;
+  border: 1px solid #39CDCC;
+}
+
+.resetbutton:hover {
+  background-color: #39CDCC;
+  color: #fff;
+  border: 1px solid #39CDCC;
 }

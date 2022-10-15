@@ -14,7 +14,7 @@ import { FilterValuesType, OrganizationType } from '../../../types';
 
 
 type Props = {
-  users: UserType[];
+  users: UserType[] | undefined;
 }
 
 

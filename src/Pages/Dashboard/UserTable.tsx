@@ -8,40 +8,29 @@ import TableHeaderIcon from './TableHeaderIcon';
 import ArrowLeft from './ArrorLeft';
 import ArrowRight from './ArrowRight';
 import { Link } from 'react-router-dom';
-import Filter from '../../Components/Filter';
-import { useSelector, useDispatch } from 'react-redux';
-import { AppDispatch } from '../../store';
-import { RootState } from '../../store';
-import { showDropDown } from '../../reducers/Filter/dropdown';
 
+import { useSelector } from 'react-redux';
+
+import { RootState } from '../../store';
 
 interface Paginate {
   selected:number
 }
 interface Props {
   usersProp: UserType[] | undefined;
+  handleDropDown: () => void;
 }
-const UserTable = ({ usersProp }:Props) => {
+const UserTable = ({ usersProp, handleDropDown }:Props) => {
   const filterValue = useSelector((state:RootState) => state.filter.organization.value);
   const [pageNumber,setPageNumber] = useState<number>(0);
-
-  const dispatch:AppDispatch = useDispatch();
-  const showDropdown = useSelector((state:RootState) => state.dropdown);
-  const handleDropDown = (): void => {
-    dispatch(showDropDown());
-
-
-  };
-
-
   const usersPerPage = 10;
   const pagesVisited = pageNumber * usersPerPage;
 
   const users:UserType[] = (usersProp as UserType[]);
 
-  const USERS = filterValue ? users.filter((user ) => user.orgName === filterValue) : users;
+  const filterUsers = filterValue ? users.filter((user ) => user.orgName === filterValue) : users;
   const displayUsers = () => {
-    const newUsers = USERS?.slice(pagesVisited, pagesVisited + usersPerPage);
+    const newUsers = filterUsers?.slice(pagesVisited, pagesVisited + usersPerPage);
 
     return newUsers?.map((user, i) => <Link className= {styles.routerlink} to= {`/dashboard/users/${user.id}`} key= {i}><UserTableExcerpt user= {user}/></Link>);
 
@@ -67,10 +56,8 @@ const UserTable = ({ usersProp }:Props) => {
       </div>
       {displayUsers()}
       <div className= {styles.showpagecontainer}> <div className= {styles.showing}>
-        showing {usersPerPage * pageNumber + 1} to {usersPerPage * pageNumber + usersPerPage}
-        of {users?.length} entries
-      </div>
-      <ReactPaginate previousLabel = {pageNumber > 0 &&  <ArrowLeft/> }
+        showing {usersPerPage * pageNumber + 1} to {usersPerPage * pageNumber + usersPerPage} of {users?.length} entries
+      </div> { filterUsers?.length > 10 && (<ReactPaginate previousLabel = {pageNumber > 0 &&  <ArrowLeft/> }
         pageCount={pageCount}
         onPageChange = {changePage}
         nextLabel = {pageNumber < pageCount - 1 && <ArrowRight/>}
@@ -90,11 +77,13 @@ const UserTable = ({ usersProp }:Props) => {
           styles.paginationactive
         }
 
-      />
+      />)
+
+      }
       </div>
 
     </div>
-    {showDropdown && <Filter users={users}/>}
+
   </div>
   );
 };

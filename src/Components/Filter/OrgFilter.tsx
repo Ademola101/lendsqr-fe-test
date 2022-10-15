@@ -2,7 +2,7 @@ import React from 'react';
 import { UserType } from '../../../types';
 import Select from 'react-select';
 interface Props {
-  users: UserType[];
+  users: UserType[] | undefined;
   handleChange: (selectedOption: selectOptionType |null ) => void;
   filterValue: selectOptionType | null;
 
