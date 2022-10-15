@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/UserTable.module.css';
+import styles from '../../../styles/UserTable.module.css';
 
 interface Props {
   onClick?: () => void;

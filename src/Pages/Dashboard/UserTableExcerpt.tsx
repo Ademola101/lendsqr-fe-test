@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../styles/UserTable.module.css';
 import { UserType } from '../../../types';
-import StatusVectorIcon from './StatusVectorIcon';
+import StatusVectorIcon from './Icons/StatusVectorIcon';
 
 interface UserTableProps {
   user: UserType

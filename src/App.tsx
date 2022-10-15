@@ -33,6 +33,7 @@ function App() {
         <Route path="/dashboard" element={
           loggedUser ? <Dashboard /> : <Navigate to="/" />} />
         <Route path="/dashboard/users/:id" element={loggedUser ? <UserDetails/> : <Navigate to="/"/>} />
+        <Route path="*" element={<Navigate to="/" />} />
 
 
       </Routes>

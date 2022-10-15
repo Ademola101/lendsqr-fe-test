@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/UserTable.module.css';
+import styles from '../../../styles/UserTable.module.css';
 const StatusVectorIcon = () => {
   return (
     <div><svg className= {styles.statusvectoricon} width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">

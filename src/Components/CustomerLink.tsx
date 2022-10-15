@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from '../styles/Sidebar.module.css';
 
+import UserLinkIcon from './LinksIcon/UserLinkIcon';
+import LoanSackIcon from './LinksIcon/LoanSackIcon';
+import DecisionIcon from './LinksIcon/DecisionIcon';
 
 type Link= {
   name: string;
@@ -14,13 +17,16 @@ interface Props {
 const customer:Link[] = [
   {
     name: 'Users',
+    icon: <UserLinkIcon/>
   },
 
   {
     name: 'Loans',
+    icon: <LoanSackIcon/>
   },
   {
     name: 'Decision Models',
+    icon: <DecisionIcon/>
 
   },
   {
@@ -43,7 +49,9 @@ const business:Link[] = [
 
 
   },
-  { name:'Loan Requests' },
+  { name:'Loan Requests',
+
+  },
   { name:'Savings Products' },
   { name: 'Fees and Charges' },
   { name: 'Transactions' },

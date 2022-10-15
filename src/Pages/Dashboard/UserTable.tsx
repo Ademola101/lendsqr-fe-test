@@ -4,9 +4,9 @@ import { UserType } from '../../../types';
 import styles from '../../styles/UserTable.module.css';
 import ReactPaginate from 'react-paginate';
 import UserTableExcerpt from './UserTableExcerpt';
-import TableHeaderIcon from './TableHeaderIcon';
-import ArrowLeft from './ArrorLeft';
-import ArrowRight from './ArrowRight';
+import TableHeaderIcon from './Icons/TableHeaderIcon';
+import ArrowLeft from './Icons/ArrorLeft';
+import ArrowRight from './Icons/ArrowRight';
 import { Link } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';

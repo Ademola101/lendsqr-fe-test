@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../styles/Sidebar.module.css';
 import CustomerLinks from './CustomerLink';
 import SwitchLink from '../Components/LinksIcon/SwitchIcon';
+import DashLink from './LinksIcon/DashLinkIcon';
 
 const Sidebar = () => {
   return (
@@ -11,7 +12,7 @@ const Sidebar = () => {
 
 
         <div>
-          <a className= {styles.switch} href="#"> Dashboard</a>
+          <a className= {styles.switch} href="#"><DashLink/> Dashboard</a>
         </div>
 
       </div>
