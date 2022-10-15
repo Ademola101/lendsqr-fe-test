@@ -61,3 +61,16 @@ export interface Link {
   icon?: JSX.Element;
 
 }
+
+
+export type OrganizationType = {
+  value: string | null;
+  label: string | null;
+}
+
+export type FilterValuesType = {
+  username: string;
+  email: string;
+  organization: OrganizationType | null;
+}
+

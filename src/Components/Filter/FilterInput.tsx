@@ -5,8 +5,9 @@ interface Props {
   inputname: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   type?: string;
+  name?: string;
 }
-const FilterInput = ({ inputname, onChange, type }:Props) => {
+const FilterInput = ({ inputname, onChange, type, name }:Props) => {
   return (
     <div>
 
@@ -14,6 +15,7 @@ const FilterInput = ({ inputname, onChange, type }:Props) => {
       <input className= {styles.usernameinput}
         type={type}
         onChange={onChange}
+        name={name}
       />
     </div>
   );

@@ -1,30 +1,23 @@
 import React from 'react';
 import { UserType } from '../../../types';
 import Select from 'react-select';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../store';
-import { setOrganization } from '../../reducers/Filter/filter';
-
 interface Props {
   users: UserType[];
+  handleChange: (selectedOption: selectOptionType |null ) => void;
+  filterValue: selectOptionType | null;
 
 }
 
 type selectOptionType = {
-  value: string ;
-  label: string;
+  value: string | null;
+  label: string | null;
 }
-const Organization = ({ users }:Props) => {
-  const dispatch:AppDispatch = useDispatch();
-  const filterValue = useSelector((state:RootState) => state.filter.organization);
+const Organization = ({ users, handleChange, filterValue }:Props) => {
   const options = users?.map(({ orgName }) => {
     return { value: orgName, label: orgName };
   }
   );
 
-  const handleChange = (selectedOption: selectOptionType |null ) => {
-    dispatch(setOrganization(selectedOption));
-  };
 
   return (
     <div> <p>
@@ -35,6 +28,7 @@ const Organization = ({ users }:Props) => {
       value={filterValue}
       options={options}
       onChange={handleChange}
+      name='organization'
     />
     </div>
   );

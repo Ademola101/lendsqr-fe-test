@@ -22,7 +22,7 @@ interface Props {
   usersProp: UserType[] | undefined;
 }
 const UserTable = ({ usersProp }:Props) => {
-  // const filterValue = useSelector((state:RootState) => state.organization);
+  const filterValue = useSelector((state:RootState) => state.filter.organization.value);
   const [pageNumber,setPageNumber] = useState<number>(0);
 
   const dispatch:AppDispatch = useDispatch();
@@ -37,18 +37,11 @@ const UserTable = ({ usersProp }:Props) => {
   const usersPerPage = 10;
   const pagesVisited = pageNumber * usersPerPage;
 
-  // const filterUsers = Users?.filter((user) => {
+  const users:UserType[] = (usersProp as UserType[]);
 
-  //   if (filterValue) {
-  //     return user.orgName === filterValue.value;
-  //   }
-  //   return user;
-  // });
-
-  // const users = filterUsers as UserType[];
-  const users:UserType[] = usersProp as UserType[];
-  const displayUsers = (users:UserType[]) => {
-    const newUsers = users?.slice(pagesVisited, pagesVisited + usersPerPage);
+  const USERS = filterValue ? users.filter((user ) => user.orgName === filterValue) : users;
+  const displayUsers = () => {
+    const newUsers = USERS?.slice(pagesVisited, pagesVisited + usersPerPage);
 
     return newUsers?.map((user, i) => <Link className= {styles.routerlink} to= {`/dashboard/users/${user.id}`} key= {i}><UserTableExcerpt user= {user}/></Link>);
 
@@ -72,7 +65,7 @@ const UserTable = ({ usersProp }:Props) => {
         <span className= {styles.header}> <div className= {styles.headerorg}> Date joined</div> <TableHeaderIcon onClick={handleDropDown}/></span>
         <span className= {styles.header}> <div className= {styles.headerorg}> Status</div>  <TableHeaderIcon/></span>
       </div>
-      {displayUsers(users)}
+      {displayUsers()}
       <div className= {styles.showpagecontainer}> <div className= {styles.showing}>
         showing {usersPerPage * pageNumber + 1} to {usersPerPage * pageNumber + usersPerPage}
         of {users?.length} entries
