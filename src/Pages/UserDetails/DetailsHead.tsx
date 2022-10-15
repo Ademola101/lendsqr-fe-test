@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../../styles/UserDetails.module.css';
 import { UserType } from '../../../types';
+import StarIcon from './StarIcon';
 
 interface UserDetailsProps {
   user: UserType
@@ -58,8 +59,14 @@ const DetailsHead = ({ user }: UserDetailsProps) => {
       </div>
 
       <div className= {styles.tier}>
+        <div>
         User tier
+        </div>
+        <div>
 
+          <StarIcon/> <StarIcon/><StarIcon/>
+
+        </div>
       </div>
       <div>
         <div className= {styles.balance}>

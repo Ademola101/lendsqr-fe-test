@@ -68,7 +68,7 @@
 .avatarname {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #213F7D;
+  color:#545F7D;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -84,7 +84,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #213F7D;
+  color:#545F7D;
+  flex-direction: column;
 
 }
 .bvn {
@@ -102,10 +103,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: #213F7D;
+  color:#545F7D;
 }
 .accountsmall {
-  color: #213F7D;
+  color:#545F7D;
   font-size: 0.8rem;
 }
 
@@ -188,10 +189,38 @@
   .avatarname{
     border-right: none;
     padding-right: 0px;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
   }
   .img {
     width:70px;
-    object-fit: cover;
+    object-fit: none;
+    height: auto;
+  }
+  .detailshead {
+    align-items: center;
+  }
+  .tier {
+    border-right: none;
+    padding-right: 0px;
+    height: auto;
+  }
+
+  .dlink {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px
+  }
+  .detailslink {
+    width: 100%;
+  }
+  .img {
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
   }
 }
   
