@@ -7,6 +7,11 @@
   margin-top: 20px;
 }
 
+.logolink {
+  width: 20%;
+}
+
+
 .dropdown {
   display: flex;
   flex-direction: row;
@@ -124,5 +129,16 @@
 
   .belliconcontainer {
     margin-left: 0;
+  }
+
+  .logolink {
+    width: 100%;
+
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

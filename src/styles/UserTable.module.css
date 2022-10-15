@@ -49,6 +49,11 @@
 
 }
 
+.excerptcontainer:hover {
+  background-color: #F7F7F7;
+  cursor: pointer;
+}
+
 .header {
   width: 15%;
   display: flex;
@@ -170,6 +175,9 @@
 
 .icon {
   width: 10px
+}
+.icon:hover {
+  cursor: pointer;
 }
 
 .statusvectoricon {

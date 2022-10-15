@@ -35,6 +35,12 @@
   justify-content: flex-end;
 }
 
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
 .usernameinput {
   display: flex;
   flex-direction: column;

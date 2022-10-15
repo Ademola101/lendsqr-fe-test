@@ -9,13 +9,16 @@ const index = () => {
   return (
     <header className= {styles.headercontainer}>
 
-      <Link to= "/">
+      <Link className= {styles.logolink} to= "/">
         <div className= {styles.logo}>
           <Logo/>
         </div>
       </Link>
+
+
       <Search />
       <Docs />
+
     </header>
   );
 };
