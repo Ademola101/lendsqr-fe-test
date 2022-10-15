@@ -92,10 +92,10 @@
 @media (max-width:768px) {
 
   .input {
-    width: 100%;
+    width: 300px
   }
   .loginButton {
-    width: 108%;
+    width: 320px;
     padding: 0 10px
   }
 

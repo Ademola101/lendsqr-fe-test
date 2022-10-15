@@ -40,7 +40,7 @@ const DetailsHead = ({ user }: UserDetailsProps) => {
     <div className={styles.detailshead}>
       <div className={styles.avatarname}>
 
-        <img src={user?.profile.avatar} alt="avatar" />
+        <img className= {styles.img} src={user?.profile.avatar} alt="avatar" />
 
         <div className= {styles.namebvncontainer}>
           <div className={styles.name}>
