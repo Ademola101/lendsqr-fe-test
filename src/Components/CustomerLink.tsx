@@ -8,7 +8,6 @@ import SavingIcon from './LinksIcon/SavingIcon';
 import Lrequest from './LinksIcon/Lrequest';
 import WhiteListIcon from './LinksIcon/WhiteListIcon';
 import KarmaIcon from './LinksIcon/KarmaIcon';
-import OrganiIcon from './LinksIcon/OrganiIcon';
 
 type Link= {
   name: string;
