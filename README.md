@@ -18,7 +18,7 @@ Lendsqr is a lending platform that allows users to lend and borrow money from ea
   - ![Home Page](/screenshots/web_home.png)
 
     - - Dashboard
-  - ![Dashboard](/screenshots/web_dash.png)
+  - ![Dashboard](/screenshots/web_dash-1.png)
   
     - - User Details
   - ![User Details](/screenshots/web_details.png)
