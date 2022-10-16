@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  animation: 0.5s ease-in-out 0s 1 slideInFromLeft;
+  width: 200px;
+  position: relative;
+  left: 80%;
+  bottom: 20px;
+  z-index: 100;
+  margin-bottom: -120px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+  
+
+
+.link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: #545F7D;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: oldlace;
+}
+
+.link :hover {
+  background-color: #F7F7F7;
+}

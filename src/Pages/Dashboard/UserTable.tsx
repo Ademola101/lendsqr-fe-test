@@ -33,7 +33,10 @@ const UserTable = ({ usersProp, handleDropDown }:Props) => {
   const displayUsers = () => {
     const newUsers = filterUsers?.slice(pagesVisited, pagesVisited + usersPerPage);
 
-    return newUsers?.map((user) => <UserTableExcerpt user= {user} key = {user.id}/>);
+    return newUsers?.map((user) => (<div key = {user.id}>
+      <UserTableExcerpt user= {user} />
+
+    </div>) );
 
 
   };
