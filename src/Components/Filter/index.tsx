@@ -66,7 +66,7 @@ const index = ({ users }:Props) => {
       <FilterInput inputname="Phone Number" onChange={onChange} />
 
       <div>
-        <p>Status</p>
+        <p className= {styles.inputname}>Status</p>
         <Select
           options={[
             { value: 'Active', label: 'Active' },

@@ -1,6 +1,7 @@
 import React from 'react';
 import { UserType } from '../../../types';
 import Select from 'react-select';
+import styles from '../../styles/Filter.module.css';
 interface Props {
   users: UserType[] | undefined;
   handleChange: (selectedOption: selectOptionType |null ) => void;
@@ -20,7 +21,7 @@ const Organization = ({ users, handleChange, filterValue }:Props) => {
 
 
   return (
-    <div> <p>
+    <div> <p className= {styles.inputname}>
        Organization
 
     </p>

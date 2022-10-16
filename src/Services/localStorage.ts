@@ -9,3 +9,11 @@ export const getLocalStorageItem = (key: string) => {
 export const removeLocalStorageItem = (key: string) => {
   localStorage.removeItem(key);
 };
+
+export const getFechedData = (key: string) => {
+  const data = getLocalStorageItem(key);
+  if (data) {
+    return JSON.parse(data);
+  }
+  return null;
+};

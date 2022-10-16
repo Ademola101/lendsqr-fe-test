@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { UserType } from '../../../types';
 
+
 const baseUrl = ' https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/';
 
 export const getAllUsers = async(): Promise<UserType[]> => {
@@ -15,7 +16,10 @@ export const getAllUsers = async(): Promise<UserType[]> => {
     };
 
   });
+
   return users;
+
+
 };
 
 
@@ -25,6 +29,7 @@ export const getUser = async(id: string): Promise<UserType> => {
   const randomStatus = status[Math.floor(Math.random() * status.length)];
   const data = response.data;
   data.status = randomStatus;
+  // setLocalStorageItem('user', JSON.stringify(data));
 
   return data;
 

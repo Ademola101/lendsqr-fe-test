@@ -9,9 +9,9 @@ interface Props {
 }
 const FilterInput = ({ inputname, onChange, type, name }:Props) => {
   return (
-    <div>
+    <div className= {styles.filterinputlabel}>
 
-      <p>{inputname}</p>
+      <p className= {styles.inputname}>{inputname}</p>
       <input className= {styles.usernameinput}
         type={type}
         onChange={onChange}

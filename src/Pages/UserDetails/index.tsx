@@ -15,15 +15,19 @@ import Socials from './Socials';
 import Guarantor from './Guarantor';
 import  BeatLoader  from 'react-spinners/BeatLoader';
 
+
 type id = string | undefined;
 const index = () => {
 
   const { id } = useParams<{ id: id }>();
 
+
   const { data: user, isLoading, isError } = useQuery(['user', id], () => getUser(id as string));
 
   const User = user as UserType;
-  while (isLoading) {
+
+
+  if (isLoading) {
     return  <div className= {styles.loading}><BeatLoader color={'#123abc'} loading={isLoading} size={20} /></div>;
 
 
