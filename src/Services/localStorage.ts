@@ -10,7 +10,7 @@ export const removeLocalStorageItem = (key: string) => {
   localStorage.removeItem(key);
 };
 
-export const getFechedData = (key: string) => {
+export const getFetchedData = (key: string) => {
   const data = getLocalStorageItem(key);
   if (data) {
     return JSON.parse(data);

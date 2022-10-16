@@ -143,3 +143,15 @@ gap: 20px;
   color: #fff;
   border: 1px solid #39CDCC;
 }
+
+@media (max-width: 768px) {
+  .filtercardanimation {
+
+    right: 0;
+    left: 50%;
+  }
+}
+  
+  
+
+  

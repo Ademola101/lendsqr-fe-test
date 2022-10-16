@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 import { UserType } from '../../../types';
-
+import { setLocalStorageItem } from '../localStorage';
 
 const baseUrl = ' https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/';
 
@@ -29,7 +29,7 @@ export const getUser = async(id: string): Promise<UserType> => {
   const randomStatus = status[Math.floor(Math.random() * status.length)];
   const data = response.data;
   data.status = randomStatus;
-  // setLocalStorageItem('user', JSON.stringify(data));
+  setLocalStorageItem(`user-${id}`, JSON.stringify(data));
 
   return data;
 

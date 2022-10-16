@@ -14,18 +14,29 @@ import Education from './Education';
 import Socials from './Socials';
 import Guarantor from './Guarantor';
 import  BeatLoader  from 'react-spinners/BeatLoader';
+import { getFetchedData } from '../../Services/localStorage';
 
 
 type id = string | undefined;
 const index = () => {
 
   const { id } = useParams<{ id: id }>();
+  const { data:fetcheduser, isLoading, isError } =  useQuery(['user', id], () => getUser(id as string));
 
 
-  const { data: user, isLoading, isError } = useQuery(['user', id], () => getUser(id as string));
+  const user = () => {
+    if (getFetchedData(`user${id}`)) {
+      return getFetchedData(`user${id}`) as UserType;
+    }
 
-  const User = user as UserType;
 
+
+
+
+
+    return fetcheduser as UserType;
+
+  };
 
   if (isLoading) {
     return  <div className= {styles.loading}><BeatLoader color={'#123abc'} loading={isLoading} size={20} /></div>;
@@ -36,6 +47,7 @@ const index = () => {
   if (isError) {
     return <div>Error</div>;
   }
+
 
   return (
     <div >
@@ -57,11 +69,11 @@ const index = () => {
           </p>
           <div className= {styles.infocontainer}>
 
-            <DetailsHead user={User}/>
-            <PersonalInformation user={User}/>
-            <Education user={User}/>
-            <Socials user={User}/>
-            <Guarantor user={User}/>
+            <DetailsHead user={user()}/>
+            <PersonalInformation user={user()}/>
+            <Education user={user()}/>
+            <Socials user={user()}/>
+            <Guarantor user={user()}/>
 
           </div>
 
