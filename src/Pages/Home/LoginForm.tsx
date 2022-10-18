@@ -14,15 +14,11 @@ type Data = {
   password: string;
 }
 
-const Credentials = {
-  email: 'test@email.com',
-  password: '123456'
-};
 
 const LoginForm = () => {
 
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  const [error, setError] = useState<string>('');
+  const [error] = useState<string>('');
   const navigate = useNavigate();
 
   const dispatch = useDispatch<AppDispatch>();
@@ -35,21 +31,12 @@ const LoginForm = () => {
     resolver: yupResolver(schema),
   });
   const onSubmit = (data:Data) => {
-    if (
-      data.email === Credentials.email && data.password === Credentials.password
 
-    ) {
-      navigate('/dashboard');
-      dispatch(setCredentials(data));
-      setLocalStorageItem('credentials', JSON.stringify(data));
-    }
-    else {
-      setError('Invalid Credentials');
-      setTimeout(() => {
-        setError('');
-      }, 3000);
-    }
+    navigate('/dashboard');
+    dispatch(setCredentials(data));
+    setLocalStorageItem('credentials', JSON.stringify(data));
   };
+
   const passwordValue = watch('password');
 
   const togglePassword = () => {
