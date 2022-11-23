@@ -3,11 +3,12 @@ import Home from './Pages/Home';
 import Dashboard from './Pages/Dashboard';
 import UserDetails from './Pages/UserDetails';
 import { getLocalStorageItem } from './Services/localStorage';
-import { Route, Routes, Navigate, useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
+import {  useDispatch, useSelector } from 'react-redux';
 import { setCredentials } from './reducers/Auth';
 import { AppDispatch } from './store';
 import { RootState } from './store';
+import ProtectedRoute from './ProtectedRoute';
 
 
 function App() {
@@ -19,22 +20,23 @@ function App() {
   useEffect(() => {
     const credentials = getLocalStorageItem('credentials');
     if (credentials) {
-      navigate('/dashboard');
       dispatch(setCredentials(JSON.parse(credentials)));
+      navigate('/dashboard');
     }
   }, []);
 
   const loggedUser = useSelector((state: RootState) => state.auth.email);
+
+
   return (
     <div>
       <Routes>
-        <Route path="/" element={
-          loggedUser ? <Navigate to="/dashboard" /> : <Home />} />
-        <Route path="/dashboard" element={
-          loggedUser ? <Dashboard /> : <Navigate to="/" />} />
-        <Route path="/dashboard/users/:id" element={loggedUser ? <UserDetails/> : <Navigate to="/"/>} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path='/' element={
+          loggedUser ? <Navigate to='/dashboard' /> : <Home />
 
+        } />
+        <Route path='/dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+        <Route path='/user/:id' element={<ProtectedRoute><UserDetails /></ProtectedRoute>} />
 
       </Routes>
 
