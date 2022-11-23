@@ -31,12 +31,10 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={
-          loggedUser ? <Navigate to='/dashboard' /> : <Home />
-
-        } />
+        <Route path='/' element={loggedUser ? <Navigate to='/dashboard' /> : <Home />} />
         <Route path='/dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-        <Route path='/user/:id' element={<ProtectedRoute><UserDetails /></ProtectedRoute>} />
+        <Route path='/dashboard/users/:id' element={<ProtectedRoute><UserDetails /></ProtectedRoute>} />
+        <Route path='*' element={<Navigate to='/' />} />
 
       </Routes>
 
